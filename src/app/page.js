@@ -3,6 +3,7 @@ import font from 'next/font/local'
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import MultiCarousal from '@/components/MultiCarousal'
+import Faq from "@/components/Faq";
 const myFont = font({src : '../../public/fonts/MilkyNice.otf'})
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero/>
       <HowItWorks/>
       <MultiCarousal/>
+      <Faq/>
     </main>
   );
 }
