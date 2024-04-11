@@ -16,9 +16,10 @@ const Navbar = () => {
                 <li>
                     <Link href="/">Our Club</Link>
                 </li>
-                <button className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
+
+                <Link href='/signup' className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
                     Get Started
-                </button>
+                </Link>
             </ul>
         </div>
     )
