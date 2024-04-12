@@ -16,7 +16,7 @@ const jost = Jost({
 })
 const HowItWorks = () => {
     return (
-        <div className='w-full h-[120vh]'>
+        <div className='w-full'>
             <div className='w-full bg-[#0E609D] h-[340px] items-center flex relative'>
                 <Image src={leaf1} alt='leaf' className='absolute -bottom-2 ' />
                 <div className='w-[40%] ml-[20%]  gap-8 flex flex-col items-end '>
@@ -27,7 +27,7 @@ const HowItWorks = () => {
                 </div>
                 <Image src={recipeBook} alt='recipe book' className='absolute -top-16 right-[20%]' />
             </div>
-            <div className='mt-24 w-full  flex items-center'>
+            {/* <div className='mt-24 w-full  flex items-center'>
                 <div className='w-[40%] flex justify-end'>
                     <span className='relative w-[80%] h-fit' >
                         <Image src={howItWorks} alt='cup Image' className='' />
@@ -47,7 +47,7 @@ const HowItWorks = () => {
                     </div>
                     <Image src={leaf} alt='bg__leaf' className='absolute right-10'/>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

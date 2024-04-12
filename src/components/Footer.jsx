@@ -20,8 +20,8 @@ const Footer = () => {
         </span>
       </section>
       <section className='w-1/4 h-full flex flex-col justify-center items-center gap-4 border-r border-black'>
-        <span className='text-[#252525] text-4xl '>Let's Cookin</span>
-        <button className='flex items-center gap-1 text-white px-4 font-medium text-2xl bg-[#40AE49] rounded-full'>Let's Cokkin'<Image src={arrowRight} /></button>
+        <span className='text-[#252525] text-4xl '>Let's Cooking</span>
+        <button className='flex items-center gap-1 text-white px-4 font-medium text-2xl bg-[#40AE49] rounded-full'>Let's Cooking<Image src={arrowRight} /></button>
       </section>
       <section className='w-1/2 h-full flex flex-col justify-center md:pl-20 gap-4 border-r border-black'>
         <span className='text-[#252525] text-4xl '>Stay Up-to-date</span>
