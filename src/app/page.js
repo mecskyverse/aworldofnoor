@@ -11,8 +11,8 @@ export default function Home() {
     <main className={`${myFont.className} flex flex-col items-center justify-between `}>
       <Hero/>
       <HowItWorks/>
-      <MultiCarousal/>
-      <Faq/>
+      {/* <MultiCarousal/>
+      <Faq/> */}
     </main>
   );
 }
