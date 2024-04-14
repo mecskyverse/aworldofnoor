@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   padding: 0;
   margin: 0;
@@ -35,5 +36,16 @@ body {
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
+  overflow: hidden;
+}
+
+.video{
+  background-image: url('../../public/assets/videoBgVector.svg');
+}
+.vid-container{
+  border-top-left-radius: 170px;
+  border-top-right-radius: 190px;
+  border-bottom-left-radius: 140px;
+  border-bottom-right-radius: 170px;
   overflow: hidden;
 }
