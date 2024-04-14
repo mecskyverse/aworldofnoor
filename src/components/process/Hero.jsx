@@ -11,7 +11,7 @@ import arrowRight from '@/../public/assets/arrow-right.svg'
 const Hero = () => {
     const clubArray = [choice1, choice2, choice3]
     return (
-        <div className='h-[90vh] border w-full border-black flex flex-col'>
+        <div className='h-[90vh] w-full flex flex-col'>
             <div className='bg-[#1692CD] h-[85%] w-full flex '>
                 <div className='w-2/5 h-full flex flex-col  justify-center items-center relative'>
                     <Image src={logo} className='absolute border-4 box-content md:left-28 left-14 -top-14 border-white bg-white rounded-full z-10' />
