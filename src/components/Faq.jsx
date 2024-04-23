@@ -34,7 +34,7 @@ const Faq = () => {
         }
     }
     return (
-        <div className='mt-20 w-full  bg-[#E4F4F6] py-8 sm:py-10 md:py-12 lg:py-[60px] mx-6 lg:mx-auto'>
+        <div className='mt-20 w-full px-4 bg-[#E4F4F6] py-8 sm:py-10 md:py-12 lg:py-[60px] lg:mx-auto'>
             <div className={`${inter.className} mb-2 text-black text-center text-lg`}>Have Questions? We have Answers!</div>
             <h3 className={` text-center text-[#CC017A] text-5xl text-text-primary font-bold `}>
                 Frequently Asked Questions</h3>
