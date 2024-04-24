@@ -19,13 +19,13 @@ const HowItWorks = () => {
         <div className='w-full'>
             <div className='w-full bg-[#0E609D] h-[340px] items-center flex relative'>
                 <Image src={leaf1} alt='leaf' className='absolute -bottom-2 ' />
-                <div className='w-[40%] ml-[20%]  gap-8 flex flex-col items-end '>
-                    <p className='text-white text-5xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
+                <div className='md:w-[40%]  md:ml-[20%] w-full  gap-8 flex flex-col md:items-end items-center'>
+                    <p className='text-white lg:text-5xl md:text-4xl sm:text-4xl text-3xl text-center  leading-normal md:self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                         Download World of Noor Recipe Book 1 Now!
                     </p>
-                    <button className='self-start flex items-center z-10 gap-1 text-white px-5 font-medium text-2xl bg-[#E6038A] rounded-full'>Download PDF<Image src={arrowRight} /></button>
+                    <button className='md:self-start flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'>Download PDF<Image src={arrowRight} className='md:w-auto w-6' /></button>
                 </div>
-                <Image src={recipeBook} alt='recipe book' className='absolute -top-16 right-[20%]' />
+                <Image src={recipeBook} alt='recipe book' className='absolute -top-16 hidden md:block right-[20%]' />
             </div>
             {/* <div className='mt-24 w-full  flex items-center'>
                 <div className='w-[40%] flex justify-end'>
