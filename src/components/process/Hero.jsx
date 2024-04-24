@@ -11,21 +11,21 @@ import arrowRight from '@/../public/assets/arrow-right.svg'
 const Hero = () => {
     const clubArray = [choice1, choice2, choice3]
     return (
-        <div className='h-[90vh] w-full flex flex-col'>
-            <div className='bg-[#1692CD] h-[85%] w-full flex '>
-                <div className='w-2/5 h-full flex flex-col  justify-center items-center relative'>
-                    <Image src={logo} className='absolute border-4 box-content md:left-28 left-14 -top-14 border-white bg-white rounded-full z-10' />
-                    <div className='w-3/4 self-end flex flex-col gap-4 mr-5 relative'>
-                        <p className='text-white text-5xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
+        <div className='md:h-[90vh] h-[70vh] w-full flex flex-col'>
+            <div className='bg-[#1692CD] h-[85%] w-full flex justify-center relative md:pt-0 '>
+                <div className='md:w-2/5 md:bg-transparent bg-black/10 backdrop-blur-sm  w-full h-full flex md:flex-col md:self-auto self-start md:z-10 z-[5]  px-10   justify-center items-center relative md:bg-none'>
+                    <Image src={logo} className='absolute md:w-auto w-12  border-4 box-content md:left-28 left-10 md:-top-14 -top-8 border-white bg-white rounded-full md:flex hidden' />
+                    <div className='md:w-3/4 w-full md:self-end self-center flex flex-col gap-4 md:mr-5 relative'>
+                        <p className='md:text-left text-center text-white lg:text-5xl md:text-4xl sm:text-4xl text-3xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                             Discover the joy of cooking with world of Noor!
                         </p>
                         {/* <button className='self-start flex items-center gap-1 text-white px-5 font-medium text-2xl bg-[#E6038A] rounded-full'>Let's Cooking<Image src={arrowRight} /></button> */}
-                        <Image src={heroLines} alt='lines' className='absolute -bottom-16 -left-14' />
+                        <Image src={heroLines} alt='lines' className='absolute md:flex hidden -bottom-16 -left-14' />
                     </div>
                 </div>
-                <div className='w-3/5  relative flex justify-start h-full '>
-                    <Image className='mt-auto' src={cartoon} />
-                    <Image className='absolute right-10 top-7' src={heroCloud} />
+                <div className='md:w-3/5  md:relative z-0 md:flex absolute justify-start bottom-0 w-full h-full '>
+                    <Image className='md:relative absolute bottom-0 mt-auto' src={cartoon} />
+                    <Image className='absolute right-10 top-7 md:flex hidden' src={heroCloud} />
                 </div>
             </div>
             {/* <div className='h-[1/2] pt-20 w-full flex flex-col justify-center items-center '>

@@ -10,13 +10,11 @@ import choice2 from '@/../public/assets/Choice2.svg'
 import choice3 from '@/../public/assets/Choice3.svg'
 import arrowRight from '@/../public/assets/arrow-right.svg'
 const Hero = () => {
-    const clubArray = [choice1, choice2, choice3]
     return (
         <div className='h-[90vh] flex w-full flex-col'>
             <div className='bg-[#1692CD] md:h-fit h-[80%]  w-full justify-center flex relative md:pt-0 '>
                 <div className='md:w-1/2 md:bg-transparent bg-black/10 backdrop-blur-sm pt-20 w-full flex md:flex-col md:self-auto self-start md:z-10 z-[5]  px-10 justify-center items-center relative md:bg-none '>
                     <Image src={logo} className='absolute md:w-auto w-12 border-4 box-content md:left-28 left-10 md:-top-14 -top-8 border-white bg-white rounded-full md:flex hidden' />
-
 
                     <div className='md:w-3/4  w-full self-center   flex flex-col gap-4 md:mr-5 relative'>
                         <p className='md:text-left text-center  text-white lg:text-5xl md:text-4xl sm:text-4xl text-3xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
