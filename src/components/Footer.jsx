@@ -14,25 +14,25 @@ const Footer = () => {
     <footer className={`${myFont.className}`}>
       <Faq />
       <MultiCarousal />
-      <footer className={` w-full bg-[#FEF9F5] mx-6 lg:mx-auto h-[235px] border border-black  items-center flex`}>
-        <section className='w-1/4 h-full flex flex-col justify-center items-center gap-7 border-r border-black'>
-          <span className='text-[#252525] text-4xl '>Follow Us</span>
-          <span className='flex gap-4 '>
+      <footer className={` w-full bg-[#FEF9F5] px-6 lg:mx-auto h-[235px] md:border border-black md:justify-normal items-center flex md:flex-row flex-col md:gap-0 gap-3`}>
+        <section className='md:w-1/4 w-full h-full flex flex-col  justify-center items-center md:gap-7 gap-3 md:border-r border-black'>
+          <span className='text-[#252525] md:text-4xl text-3xl '>Follow Us</span>
+          <span className='flex gap-3'>
             <Image src={fbIcon} alt='Icon' />
             <Image src={igIcon} alt='Icon' />
             <Image src={tiktokIcon} alt='Icon' />
           </span>
         </section>
-        <section className='w-1/4 h-full flex flex-col justify-center items-center gap-4 border-r border-black'>
-          <span className='text-[#252525] text-4xl '>Let's Cooking</span>
-          <button className='flex items-center gap-1 text-white px-4 font-medium text-2xl bg-[#40AE49] rounded-full'>Let's Cooking<Image src={arrowRight} /></button>
+        <section className='md:w-1/4 md:flex hidden w-full h-full md:flex-col flex-row  justify-center items-center gap-4 md:border-r border-black'>
+          <span className='text-[#252525] md:text-4xl text-3xl'>Join Us</span>
+          <button className='flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'>Let's Cooking<Image src={arrowRight} className='md:w-auto w-6' /></button>
         </section>
-        <section className='w-1/2 h-full flex flex-col justify-center md:pl-20 gap-4 border-r border-black'>
-          <span className='text-[#252525] text-4xl '>Stay Up-to-date</span>
-          <form className='flex md:gap-4'>
+        <section className='md:w-1/2 w-full h-full flex flex-col justify-center md:pl-20 gap-4'>
+          <span className='text-[#252525] md:text-4xl text-3xl  w-full md:text-start text-center'>Stay Up-to-date</span>
+          <form className='flex md:gap-4 gap-1 md:flex-row flex-col items-center '>
             <input
               type="text"
-              className='border border-black bg-white placeholder:font-extralight rounded-xl w-[50%] h-[50px] placeholder:text-lg placeholder:pl-3'
+              className='border border-black bg-white placeholder:font-extralight rounded-xl md:w-[50%] w-[90%] h-[50px] placeholder:text-lg placeholder:pl-3'
               placeholder="Your Email Address..."
             />
             <button className='border-4 border-[#F4B43F] w-[20%] h-[50px] bg-[#FFDA24] text-black rounded-xl'>
