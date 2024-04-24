@@ -34,9 +34,9 @@ function MultiCarousal() {
         }
     }
     return (
-        <div className='md:px-20 px-7 w-full flex flex-col mt-20 mb-20'>
+        <div className='md:px-20 px-4 w-full flex flex-col mt-20 mb-20'>
             <p className={`text-[#0038FF] text-center text-xl ${jost.className}`}>#Chefnoor #Fatherdaughter</p>
-            <h1 className='text-[#0E609D] text-5xl mt-5 w-full mb-10 flex justify-center gap-2 drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
+            <h1 className='text-[#0E609D] lg:text-5xl md:text-4xl text-3xl  mt-5 w-full mb-10 flex justify-center gap-2 drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                 Follow Us<Image src={instaIcon} alt='insta icon' /> Instagram</h1>
             <Carousel additionalTransfrom={0}
                 arrows
@@ -64,7 +64,7 @@ function MultiCarousal() {
                 sliderClass=""
                 slidesToSlide={1}
                 swipeable >
-                <div className='md:w-[252px] md:mx-0 mx-4 md:h-[397px] h-full w-auto video-container border border-black'>
+                <div className='md:w-[252px] md:mx-0 mx-4 md:h-[397px] h-[450px] w-auto video-container border border-black'>
                     <video src='/assets/videos/carousel1.mp4' className='h-full object-cover' autoPlay muted loop>Your browser does not support the video tag.</video>
                 </div>
                 <div className='md:w-[252px] md:h-[397px] h-full  w-auto video-container border border-black'>
