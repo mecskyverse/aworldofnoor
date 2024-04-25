@@ -36,7 +36,7 @@ const Faq = () => {
     return (
         <div className='mt-20 w-full px-4 bg-[#E4F4F6] py-8 sm:py-10 md:py-12 lg:py-[60px] lg:mx-auto'>
             <div className={`${inter.className} mb-2 text-black text-center text-lg`}>Have Questions? We have Answers!</div>
-            <h3 className={` text-center text-[#CC017A] text-5xl text-text-primary font-bold `}>
+            <h3 className={` text-center text-[#CC017A] lg:text-5xl md:text-4xl text-3xl text-text-primary font-bold `}>
                 Frequently Asked Questions</h3>
             <div className="mx-auto max-w-[800px] mt-4">
                 {FaqData.map((currentFaq, index) => {
