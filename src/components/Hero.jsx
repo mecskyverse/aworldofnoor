@@ -5,9 +5,6 @@ import cartoon from '../../public/assets/cartoonUpdated.svg'
 import logo from '@/../public/assets/heroLogo.svg'
 import heroCloud from '@/../public/assets/heroCloud.svg'
 import heroLines from '@/../public/assets/heroLines.svg'
-import choice1 from '@/../public/assets/Choice1.svg'
-import choice2 from '@/../public/assets/Choice2.svg'
-import choice3 from '@/../public/assets/Choice3.svg'
 import arrowRight from '@/../public/assets/arrow-right.svg'
 const Hero = () => {
     return (
