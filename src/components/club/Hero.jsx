@@ -11,7 +11,7 @@ const Hero = () => {
         <div className=' w-full flex flex-col'>
             <div className='bg-[#1692CD] h-[75vh] w-full flex relative md:pt-0'>
                 <div className='md:w-2/5 md:bg-transparent bg-black/10 backdrop-blur-sm w-full h-full flex md:flex-col md:self-auto self-start md:z-10 z-[5]  justify-center md:px-0 px-10   items-center relative md:bg-none'>
-                    <Image src={logo} className='absolute  md:w-auto w-12 border-4 box-content md:left-28 left-10  md:-top-14 -top-8  border-white bg-white rounded-full z-10  md:flex hidden' />
+                    <Image priority={false} src={logo} className='absolute  md:w-auto w-12 border-4 box-content md:left-28 left-10  md:-top-14 -top-8  border-white bg-white rounded-full z-10  md:flex hidden' />
                     <div className='md:w-3/4 md:self-end self-center flex flex-col gap-4 md:mr-5 relative'>
                         <p className='md:text-left text-center text-white lg:text-5xl md:text-4xl text-4xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                             Join The Culinary Adventure With A World Of Noor

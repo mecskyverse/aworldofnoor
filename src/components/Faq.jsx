@@ -41,7 +41,7 @@ const Faq = () => {
             <div className="mx-auto max-w-[800px] mt-4">
                 {FaqData.map((currentFaq, index) => {
                     return (
-                        <div onClick={() => handleFaqClick(index)} className="py-3" style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.12)" }}>
+                        <div key={index} onClick={() => handleFaqClick(index)} className="py-3" style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.12)" }}>
                             <div className="cursor-pointer">
                                 <div className={`flex ${faqAnswerToShow === index && 'bg-white'} items-center justify-between border-2 rounded-xl border-black px-3 py-3 `}>
                                     <p className={`${inter.className} font-medium text-black`}>

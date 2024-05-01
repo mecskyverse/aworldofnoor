@@ -37,7 +37,7 @@ function MultiCarousal() {
         <div className='md:px-20 px-4 w-full flex flex-col mt-20 mb-20'>
             <p className={`text-[#0038FF] text-center text-xl ${jost.className}`}>#Chefnoor #Fatherdaughter</p>
             <h1 className='text-[#0E609D] lg:text-5xl md:text-4xl text-3xl  mt-5 w-full mb-10 flex justify-center gap-2 drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
-                Follow Us<Image src={instaIcon} alt='insta icon' /> Instagram</h1>
+                Follow Us<Image src={instaIcon} alt='insta_icon' width="auto" height="auto"/> Instagram</h1>
             <Carousel additionalTransfrom={0}
                 arrows
                 autoPlaySpeed={3000}

@@ -13,7 +13,7 @@ const Hero = () => {
         <div className='md:h-[90vh] h-[70vh] w-full flex flex-col'>
             <div className='bg-[#1692CD] h-[85%] w-full flex justify-center relative md:pt-0 '>
                 <div className='md:w-2/5 md:bg-transparent bg-black/10 backdrop-blur-sm  w-full h-full flex md:flex-col md:self-auto self-start md:z-10 z-[5]  px-10  justify-center items-center relative md:bg-none'>
-                    <Image src={logo} className='absolute md:w-auto w-12  border-4 box-content md:left-28 left-10 md:-top-14 -top-8 border-white bg-white rounded-full md:flex hidden' />
+                    <Image priority={false} src={logo} className='absolute md:w-auto w-12  border-4 box-content md:left-28 left-10 md:-top-14 -top-8 border-white bg-white rounded-full md:flex hidden' />
                     <div className='md:w-3/4 w-full md:self-end self-center flex flex-col gap-4 md:mr-5 relative'>
                         <p className='md:text-left text-center text-white lg:text-5xl md:text-4xl sm:text-4xl text-3xl w-full  leading-normal self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                             Discover the joy of cooking with world of Noor!
