@@ -23,11 +23,9 @@ const getUserDetail = async (router, handleSetLogin) => {
   }
   else {
     router.push('/')
-
   }
 }
 const page = () => {
-
   const [domLoaded, setDomLoaded] = useState(false);
   const [login, setLogin] = useState(false);
   const router = useRouter()
@@ -49,7 +47,7 @@ const page = () => {
           <span className='bg-[#E4F4F6] rounded-xl p-7'>
             <Auth
               supabaseClient={supabase}
-              providers={['google', 'twitter']}
+              providers={['google']}
               appearance={{
                 theme: ThemeSupa,
                 extend: true,
@@ -65,7 +63,7 @@ const page = () => {
               providerScopes={{
                 google: 'https://www.googleapis.com/auth/calendar.readonly',
               }}
-
+              redirectTo='https://aworldofnoor.vercel.app/'
             />
           </span>
         </div>)
