@@ -37,7 +37,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const handleClick = () => {
-    setIsDropdownOpen(!isOpen);
+    setIsDropdownOpen(!isDropdownOpen);
   };
   const handleLogout = async () => {
     // Implement your logout logic here (e.g., redirect, clear user data)

@@ -13,13 +13,13 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-const getUserDetail = async (router, handleSetLogin) => {
+const getUserDetail = async (router) => {
   const {
     data: { user },
     error
   } = await supabase.auth.getUser()
   if (error || !user) {
-    console.log(error)
+    // console.log(error)
   }
   else {
     router.push('/')
@@ -30,11 +30,11 @@ const page = () => {
   const [login, setLogin] = useState(false);
   const router = useRouter()
   const handleSetLogin = () => {
-    setLogin(!login)
+    setLogin(true)
   }
   useEffect(() => {
     setDomLoaded(true);
-    getUserDetail(router, handleSetLogin)
+    getUserDetail(router)
   }, []);
 
 
