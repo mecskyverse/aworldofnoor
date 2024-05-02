@@ -1,48 +1,55 @@
 'use client'
 import React, { useCallback, useEffect, useState } from 'react'
-import { createClient } from '@/utils/supabase/client'
+import { createNewClient } from '@/utils/supabase/client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+
+const getUserDetail = async (setIsLoggedIn) => {
+  const supabase = createNewClient()
+  const {
+    data: { user },
+    error
+  } = await supabase.auth.getUser()
+  if (error || !user) {
+    console.log(error)
+  }
+  else {
+    console.log(user)
+    setIsLoggedIn(true)
+  }
+}
+
 const Navbar = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    getUserDetail()
-  }, [])
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    getUserDetail(setIsLoggedIn)
+  }, [])
+
 
   const navLinks = [
     { title: 'Home', path: '/' },
     { title: 'Our Menu', path: '/menu' },
     { title: 'How it works', path: '/process' },
     { title: 'Our Club', path: '/club' },
-    { title: 'Get Started', path: '/signup' }
+    { title: 'Sign Up', path: '/signup' }
   ];
 
   const renderMenu = () => (
-    <ul className={`absolute top-0 z-50 left-0 w-full flex flex-col items-center bg-[#fef9f5] shadow-md transition  pt-5 duration-300 ease-in-out ${isOpen ? 'block' : 'hidden'}`}>
+    <ul className={`absolute top-0 z-50 left-0 w-full bg-[#fef9f5] shadow-md transition pt-5 duration-300 ease-in-out ${isOpen ? 'block' : 'hidden'}`}>
       {navLinks.map((link) => (
-        <li key={link.title} className={`py-2 px-4 text-center ${link.path === '/signup' ? 'bg-[#40AE49] text-center m-3 px-3 py-2  text-white rounded-full w-[130px] ' : null} hover:bg-gray-100`}>
+        <li key={link.title} className="py-2 px-4 text-center hover:bg-gray-100">
           <Link href={link.path} className="text-gray-700" onClick={toggleMenu}>{link.title}</Link>
         </li>
       ))}
 
     </ul>
   );
-
-  const getUserDetail = async () => {
-
-    const supabase = createClient()
-
-    const {
-      data: { user },
-    } = await supabase.auth.getUser()
-    console.log('userr', user)
-  }
 
   return (
     <nav className='z-10'>
@@ -60,12 +67,15 @@ const Navbar = () => {
           <li>
             <Link className={`link ${pathname === '/club' ? 'font-bold' : ''}`} href="/club" >Our Club</Link>
           </li>
-          <Link href='/signup' className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
-            Get Started
-          </Link>
+          {!isLoggedIn ?
+            <Link href='/signup' className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
+              Sign Up
+            </Link> :
+            <span>Welcome! </span>    
+          }
         </ul>
       </div>
-      <div className='w-full app__navbar min-h-14 sticky z-[99] md:hidden flex items-center sm:text-sm md:text-base justify-center'>
+      <div className='w-full app__navbar min-h-14 sticky z-[99] md:hidden flex items-center sm:text-sm md:text-base '>
         {isOpen ? <IoMdClose className='text-4xl absolute right-4 z-[100]' onClick={toggleMenu} /> : <IoMdMenu className='text-4xl absolute right-4' onClick={toggleMenu} />}
         {renderMenu()}
       </div>
@@ -74,3 +84,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

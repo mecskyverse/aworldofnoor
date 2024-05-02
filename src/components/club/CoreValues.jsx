@@ -6,7 +6,7 @@ const CoreValues = () => {
             <span className='flex flex-col items-center'>
                 <span className='font-sans text-[#40AE49] mb-1 text-center md:text-xl text-lg'>Passion For Cooking</span>
                 <h3 className='lg:text-5xl md:text-4xl text-3xl text-[#0E609D] mb-16'>Our Club's Core Values</h3>
-                <section class="grid grid-cols-auto gap-10 md:grid-cols-2 justify-items-center px-4 md:px-auto">
+                <section className="grid grid-cols-auto gap-10 md:grid-cols-2 justify-items-center px-4 md:px-auto">
                     <div className='w-[365px] md:w-[485px] overflow-hidden px-10 flex flex-col justify-center items-center bg-contain bg-no-repeat h-[325px]  md:min-h-[445px] bg-[url("../../public/assets/coreValue.png")] '>
                         <h2 className='md:text-6xl text-4xl text-[#0E609D] opacity-10 mb-2'>01</h2>
                         <span className='text-[#0E609D] md:text-2xl text-xl w-[220px] text-center'>Cultivate Love for the Kitchen</span>

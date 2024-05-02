@@ -1,4 +1,5 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { Auth } from '@supabase/auth-ui-react'
@@ -12,19 +13,30 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-const getUserDetail = async () => {
+const getUserDetail = async (router, handleSetLogin) => {
   const {
     data: { user },
+    error
   } = await supabase.auth.getUser()
-  console.log('userr 1', user)
+  if (error || !user) {
+    console.log(error)
+  }
+  else {
+    router.push('/')
+
+  }
 }
 const page = () => {
 
   const [domLoaded, setDomLoaded] = useState(false);
-
+  const [login, setLogin] = useState(false);
+  const router = useRouter()
+  const handleSetLogin = () => {
+    setLogin(!login)
+  }
   useEffect(() => {
     setDomLoaded(true);
-    getUserDetail()
+    getUserDetail(router, handleSetLogin)
   }, []);
 
 
