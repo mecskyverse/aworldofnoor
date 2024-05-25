@@ -6,13 +6,13 @@ import igIcon from '@/../public/assets/igIcon.svg'
 import tiktokIcon from '@/../public/assets/tiktokIcon.svg'
 import arrowRight from '@/../public/assets/arrow-right.svg'
 import MultiCarousal from './MultiCarousal'
-import Faq from './Faq'
+import Faqs from './Faq'
 const myFont = font({ src: '../../public/fonts/MilkyNice.otf' })
 
 const Footer = () => {
   return (
     <footer className={`${myFont.className}`}>
-      <Faq />
+      <Faqs />
       <MultiCarousal />
       <footer className={` w-full bg-[#FEF9F5] px-6 lg:mx-auto h-[235px] md:border border-black md:justify-normal items-center flex md:flex-row flex-col md:gap-0 gap-3`}>
         <section className='md:w-1/4 w-full h-full flex flex-col  justify-center items-center md:gap-7 gap-3 md:border-r border-black'>

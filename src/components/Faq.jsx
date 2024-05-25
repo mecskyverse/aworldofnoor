@@ -5,25 +5,22 @@ const Faq = () => {
     const [faqAnswerToShow, setFaqAnswerToShow] = useState(null);
     const FaqData = [
         {
-            question: "What is A World of Noor",
-            answer: "A World of Noor is a brand that was born out of the COVID-19 pandemic when we were unable to travel internationally. We started virtually traveling by cooking food from around the world to give our daughter the joy of learning about new cultures and places."
+            question: "What is A World of Noor?",
+            answer: "This is where I (Chef Noor) share my cooking escapades with the world! My Daddy has a saying: 'Learning in public' which he says will help me to learn how to cook better but also help others to join me and learn to cook as well. We talked about it and I liked the idea! So here we are! We started when I was only 18 months old and I love all the different ingredients and 'tricks' and 'mixes. I watch some of my old videos and I can't believe how much I have learned already! Join me with your mommy or daddy (or your grandparents) too!"
         },
         {
-            question: "Can I try out all features during Free Trial?",
-            answer: "Yes. All features are available during the trial period. Go down the rabbit hole!"
+            question: "How did A World of Noor Start?",
+            answer: "When the Covid pandemic started, Daddy was at a loss of what to do with his little 18 month old daughter. They had originally planned a family vacation to Europe, but had to cancel it and were now confined to their small condo during the lockdowns. So Daddy took to cooking with Noor to let her travel to the world through food. To keep in touch with Family far away, they started to broadcast on Instagram Live, and to share short recipe videos, and before you knew it, they had travelled to 50 culinary experiences around the world! Parents from here in California, as well as our beloved Canada from the UK, Kenya, Singapore, China and more, started to reach out to ask for the tailored father-daughter recipes and to learn new tips and tricks. It was the start of a global community that has opened our world up even more."
         },
         {
-            question: "Is it possible to cancel my subscription?",
-            answer: "Yes, you can cancel your subscription at any time. Access to plan features will continue until the end of your current billing cycle."
+            question: "What can I do on the site?",
+            answer: "This site is part of our 'hobby' and is constantly growing. Right now you can see videos, read and download recipes, and if you sign up, you can share photos of your cooking adventures!"
         },
         {
-            question: " Can I upgrade or downgrade my plan at any time?",
-            answer: " You can upgrade your plan at anytime. Currently, we don't support downgrading temporarily, but you can cancel your plan and choose a new plan when the current plan expires."
+            question: "Where can I get a Subscription box?",
+            answer: "We have started a subscription box too! It will come out quarterly and it is still being developed but if you purchase now, you get a huge discount! Also - I would love for suggestions and collaborations. Take a look at it here for more details"
         },
-        {
-            question: "Can I change the billing cycle?",
-            answer: "Currently, we don't support changing the billing cycle temporarily. However, you can cancel your plan and choose a new plan when the current plan expires."
-        },
+      
     ]
     const handleFaqClick = (index) => {
         if (faqAnswerToShow === index) {
@@ -41,9 +38,9 @@ const Faq = () => {
             <div className="mx-auto max-w-[800px] mt-4">
                 {FaqData.map((currentFaq, index) => {
                     return (
-                        <div key={index} onClick={() => handleFaqClick(index)} className="py-3" style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.12)" }}>
-                            <div className="cursor-pointer">
-                                <div className={`flex ${faqAnswerToShow === index && 'bg-white'} items-center justify-between border-2 rounded-xl border-black px-3 py-3 `}>
+                        <div key={index} className="py-3" style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.12)" }}>
+                            <div onClick={() => handleFaqClick(index)} className="cursor-pointer" >
+                                <div  className={`flex ${faqAnswerToShow === index && 'bg-white'} items-center justify-between border-2 rounded-xl border-black px-3 py-3 `}>
                                     <p className={`${inter.className} font-medium text-black`}>
                                         {index + 1}. {currentFaq.question}
                                     </p>
@@ -58,7 +55,7 @@ const Faq = () => {
                                     </div>
                                 </div>
                                 <div className="mt-2">
-                                    <p className={`${inter.className} px-4 transition-all duration-300 text-text-secondary  ${faqAnswerToShow === index ? "opacity-100 max-h-max" : "opacity-0 max-h-0"} css-x1l92z`}>
+                                    <p className={`${inter.className} px-4 transition-all duration-300 text-text-secondary  ${faqAnswerToShow === index ? "flex max-h-max opacity-100" : "hidden opacity-0 max-h-0"} css-x1l92z`}>
                                         {currentFaq.answer}
                                     </p>
                                 </div>
