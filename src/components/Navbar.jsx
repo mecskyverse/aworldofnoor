@@ -6,7 +6,10 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { RxAvatar } from "react-icons/rx";
-const getUserDetail = async (setIsLoggedIn, setAvatar) => {
+import { useUser } from '@/context'
+
+
+const getUserDetail = async (setIsLoggedIn, setAvatar, updateUser) => {
   const supabase = createNewClient()
   const {
     data: { user },
@@ -17,6 +20,8 @@ const getUserDetail = async (setIsLoggedIn, setAvatar) => {
   }
   else {
     setIsLoggedIn(true)
+    console.log('current user', user.identities[0])
+    updateUser(user.identities[0])
     user.identities.forEach(identity => {
       if (identity.identity_data?.avatar_url)
         setAvatar(identity.identity_data.avatar_url)
@@ -32,25 +37,14 @@ const Navbar = () => {
   const [avatar, setAvatar] = useState('')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const supabase = createNewClient()
+  const { updateUser } = useUser();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const handleClick = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-  const handleLogout = async () => {
-    // Implement your logout logic here (e.g., redirect, clear user data)
-
-    const { error } = await supabase.auth.signOut()
-    if (!error) {
-      setIsLoggedIn(false)
-    }
-    console.log('Logging out...');
-  };
 
   useEffect(() => {
-    getUserDetail(setIsLoggedIn, setAvatar)
+    getUserDetail(setIsLoggedIn, setAvatar, updateUser)
   }, [])
 
 
@@ -59,7 +53,7 @@ const Navbar = () => {
     { title: 'Our Menu', path: '/menu' },
     { title: 'How it works', path: '/process' },
     { title: 'Our Club', path: '/club' },
-    { title: 'Sign Up', path: '/signup' }
+    { title: 'Sign In', path: '/signup' }
   ];
 
   const renderMenu = () => (
@@ -90,10 +84,12 @@ const Navbar = () => {
             <Link className={`link ${pathname === '/club' ? 'font-bold' : ''}`} href="/club" >Our Club</Link>
           </li>
           {!isLoggedIn ?
-            <Link href='/signup' className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
-              Sign Up
+            <Link href='/signin' className='bg-[#40AE49] px-5 py-2 text-white rounded-full'>
+              Sign In
             </Link> :
-            <Avatar avatar={avatar} isDropdownOpen={isDropdownOpen} handleClick={handleClick} handleLogout={handleLogout} />
+            <Link href='/user/profile' >
+              <Avatar avatar={avatar} />
+            </Link>
           }
         </ul>
       </div>
@@ -112,21 +108,23 @@ const Avatar = ({ avatar, isDropdownOpen, handleClick, handleLogout }) => {
     )
   else
     return (
-      <div className="relative inline-block">
-        <button onClick={handleClick} className='w-10 h-10 overflow-hidden cursor-pointer rounded-full bg-[#e4f4f6] border border-black'>
-          <img src={avatar} className='w-full h-full object-cover' />
-        </button>
-        {isDropdownOpen && (
-          <div className="absolute right-0 z-50 w-40 mt-2 py-2 bg-white rounded-lg shadow-sm">
-            <button
-              className="block w-full px-4 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </div>
-        )}
-      </div>
+      <Link href='/user/profile' >
+        <div className="relative inline-block">
+          <button className='w-10 h-10 overflow-hidden cursor-pointer rounded-full bg-[#e4f4f6] border border-black'>
+            <img src={avatar} className='w-full h-full object-cover' />
+          </button>
+          {isDropdownOpen && (
+            <div className="absolute right-0 z-50 w-40 mt-2 py-2 bg-white rounded-lg shadow-sm">
+              <button
+                className="block w-full px-4 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
+      </Link>
     )
 }
 
