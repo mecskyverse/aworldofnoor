@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useUser } from '@/context';
 import { redirect } from 'next/navigation'
 import { createNewClient } from '@/utils/supabase/client';
+import ReactLoading from 'react-loading'
 const page = () => {
   const [open, setOpen] = useState(false);
   const { currentUser: user } = useUser();
