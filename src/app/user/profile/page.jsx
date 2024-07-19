@@ -23,7 +23,7 @@ const page = () => {
 
   if (user) {
     return (
-      <div className='min-h-screen '>
+      <div className='min-h-screen inline-flex justify-center items-center w-full '>
         <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4">
           <div className="flex items-center space-x-4">
             {/* <Avatar className="w-16 h-16 rounded-full">
@@ -76,7 +76,7 @@ const page = () => {
       </div>
     );
   }
-  return <div className='min-h-screen'>
+  return <div className='min-h-screen w-full flex justify-center items-center'>
     <ReactLoading type='spinningBubbles' color='#416072' height={100} width={55} />
 
   </div>
