@@ -53,8 +53,13 @@ export async function updateSession(request) {
       },
     }
   )
+ 
+ await supabase.auth.getUser()
+ 
+  // if (request.nextUrl.pathname.startsWith('/user/profile')) {
 
-  await supabase.auth.getUser()
+  //     return NextResponse.redirect(new URL('/signin', request.url))
+  // }
 
   return response
 }
