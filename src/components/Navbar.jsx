@@ -16,7 +16,7 @@ const getUserDetail = async (setIsLoggedIn, setAvatar, updateUser) => {
     error
   } = await supabase.auth.getUser()
   if (error || !user) {
-    console.log(error)
+
   }
   else {
     setIsLoggedIn(true)
