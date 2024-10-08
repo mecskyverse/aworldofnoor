@@ -98,13 +98,6 @@ body {
   z-index: 2;
 }
 
-.video-container {
-  border-top-left-radius: 110px;
-  border-top-right-radius: 60px;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-  overflow: hidden;
-}
 
 .video {
   background-image: url('../../public/assets/videoBgVector.svg');

@@ -28,7 +28,7 @@ function MultiCarousel() {
 
     const videoData = [
         { src: '/assets/videos/carousel1.mp4', poster: '/assets/posters/carousel1_poster.jpg' },
-        { src: '/assets/videos/carousel29.mp4', poster: '/assets/posters/carousel2_poster.jpg' },
+        { src: '/assets/videos/carousel29.mp4',poster: '/assets/posters/carousel2_poster.jpg' },
         { src: '/assets/videos/carousel3.mp4', poster: '/assets/posters/carousel3_poster.jpg' },
         { src: '/assets/videos/carousel4.mp4', poster: '/assets/posters/carousel4_poster.jpg' },
         { src: '/assets/videos/carousel5.mp4', poster: '/assets/posters/carousel5_poster.jpg' },
@@ -76,7 +76,7 @@ function VideoItem({ src, poster }) {
     };
 
     return (
-        <div className='md:w-[252px] md:mx-0 mx-4 md:h-[397px] h-[450px] w-auto video-container border border-black relative'>
+        <div className='md:w-[252px] md:mx-0 mx-4 md:h-[397px] h-[450px] w-auto video-container relative overflow-hidden rounded-lg shadow-lg'>
             <video
                 ref={videoRef}
                 src={src}

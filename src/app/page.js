@@ -12,8 +12,9 @@ export default function Home() {
       <Hero/>
       {/* <UserUploadCarousal/> */}
       <HowItWorks/>
-      {/* <MultiCarousal/>
-      <Faq/> */}
+      <Faq/>
+      <MultiCarousal/>
+
     </main>
   );
 }
