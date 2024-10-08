@@ -12,11 +12,6 @@ export default function Sidebar() {
             group: "General",
             items: [
                 {
-                    link: "/user/profile",
-                    icon: <User />,
-                    text: "Profile"
-                },
-                {
                     link: "/user/subscription",
                     icon: <Inbox />,
                     text: "Subscription Box"
@@ -26,11 +21,6 @@ export default function Sidebar() {
                     icon: <Users />,
                     text: "Community"
                 },
-                {
-                    link: "/",
-                    icon: <BellIcon />,
-                    text: "Notifications"
-                }
             ]
         },
 
