@@ -159,7 +159,7 @@ function SubscriptionBox() {
             onClick={handleClick} 
             disabled={isLoading}
           >
-            Get Started
+            Buy Now
           </button>
           <p className="text-purple-600 mb-4">No commitment: Skip or cancel any time.</p>
           <div>
