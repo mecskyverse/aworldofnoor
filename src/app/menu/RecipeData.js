@@ -13,7 +13,8 @@ export const dishes = [
         image: menu7Image,
         time: '40 MIN',
         difficulty: 'EASY PREP',
-        servings: '3 SERVES'
+        servings: '3 SERVES',
+        country: 'Mexico'
     },
     {
         id: 2,
@@ -22,7 +23,8 @@ export const dishes = [
         image: menu8Image,
         time: '1 HOUR',
         difficulty: 'HARD PREP',
-        servings: '4 SERVES'
+        servings: '4 SERVES',
+        country: 'Italy'
     },
     {
         id: 3,
@@ -31,7 +33,8 @@ export const dishes = [
         image: menu9Image,
         time: '30 MIN',
         difficulty: 'EASY PREP',
-        servings: '3 SERVES'
+        servings: '3 SERVES',
+        country: 'Mexico'
     },
     {
         id: 4,
@@ -40,7 +43,8 @@ export const dishes = [
         image: menu10Image,
         time: '10 MIN',
         difficulty: 'EASY PREP',
-        servings: '2 SERVES'
+        servings: '2 SERVES',
+        country: 'Italy'
     },
     {
         id: 5,
@@ -49,7 +53,9 @@ export const dishes = [
         image: menu11Image,
         time: '20 MIN',
         difficulty: 'EASY PREP',
-        servings: '2 SERVES'
+        servings: '2 SERVES',
+        country: 'United Kingdom'
+
     },
     {
         id: 6,
@@ -58,6 +64,7 @@ export const dishes = [
         image: menu12Image,
         time: '25 MIN',
         difficulty: 'MEDIUM PREP',
-        servings: '6 SERVES'
+        servings: '6 SERVES',
+        country: 'Canada'
     },
 ];
