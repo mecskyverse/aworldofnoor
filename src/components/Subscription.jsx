@@ -15,8 +15,7 @@ function SubscriptionBox() {
   const handleClick = async () => {
     setIsLoading(true);
     try {
-      const checkout = await createCheckout(variantId, quantity);
-      window.location.href = checkout.webUrl;
+      window.open('https://buy.stripe.com/test_5kAaIC2Rl6c3eVa7ss', '_blank');
     } catch (error) {
       console.error('Error creating checkout:', error);
       alert('There was an error processing your request. Please try again.');

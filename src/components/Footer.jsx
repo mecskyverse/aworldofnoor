@@ -36,15 +36,15 @@ const Footer = () => {
         </section>
         <section className='md:w-1/2 w-full h-full flex flex-col justify-center md:pl-20 gap-4'>
           <span className='text-[#252525] md:text-4xl text-3xl  w-full md:text-start text-center'>Stay Up-to-date</span>
-          <form aciton="/search" className='flex md:gap-4 gap-1 md:flex-row flex-col items-center '>
+          <form action="/search" className='flex md:gap-4 gap-1 md:flex-row flex-col items-center '>
             <input
               type="text"
               className='border border-black bg-white placeholder:font-extralight rounded-xl md:w-[50%] w-[90%] h-[50px] placeholder:text-lg placeholder:pl-3'
               placeholder="Your Email Address..."
             />
-            {/* <button type='submit' className='border-4 border-[#F4B43F] w-[20%] h-[50px] bg-[#FFDA24] text-black rounded-xl'>
+            <button type='submit' className='border-4 border-[#F4B43F] w-[20%] h-[50px] bg-[#FFDA24] text-black rounded-xl'>
               Submit
-            </button> */}
+            </button>
           </form>
         </section>
       </footer>
