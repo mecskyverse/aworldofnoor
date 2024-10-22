@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import logo from '@/../public/assets/heroLogo.svg'
+import logo from '@/../public/assets/aworldornoorlogo.png'
 import Image from 'next/image';
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
@@ -61,7 +61,7 @@ const Navbar = () => {
               alt='logo' 
               priority={false} 
               src={logo} 
-              className='absolute md:w-auto w-12 border-4 box-content md:left-20 left-10 md:top-4 border-white bg-white rounded-full md:flex' 
+              className='absolute md:w-20 w-12 border-4 box-content md:left-20 left-10 md:top-4 border-white bg-white rounded-full md:flex' 
             />
           </div>
           <div className="hidden md:block">

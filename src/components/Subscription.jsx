@@ -117,8 +117,8 @@ function SubscriptionBox() {
       {/* Content Section */}
       <div className='w-full md:w-1/2 h-full flex flex-col items-center shadow-lg bg-white rounded-lg mt-6 md:mt-0'>
         <div className="bg-white p-4 md:p-8 w-full max-w-2xl">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">The Looker Cooking Kit</h1>
-          <p className="text-base md:text-lg mb-2">Year 3-14</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-green-600">The Looker Cooking Kit</h1>
+          <p className="text-base md:text-lg mb-2 text-green-600">Year 3-14</p>
           
           <div className="flex items-center mb-4">
             <div className="flex items-center text-yellow-500 mr-2">

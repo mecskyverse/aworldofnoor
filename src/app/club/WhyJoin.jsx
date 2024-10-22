@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const WhyJoin = () => {
   return (
-    <Card className="bg-blue-900 text-white p-8 rounded-3xl md:max-w-[70%] mx-auto my-10">
+    <Card className="bg-[#37a3d3] text-white p-8 rounded-3xl md:max-w-[70%] mx-auto my-10">
       <CardContent className="text-center space-y-4">
         <h2 className="text-4xl font-bold mb-4">
           Buy the Subscription box to join Noor's Club and receive your Cooking Starter kit.

@@ -128,7 +128,7 @@ function page() {
       </div>
       <div className='w-1/2 h-full flex flex-col items-center shadow-lg bg-white rounded-lg min-h-screen'>
         <div className="bg-white p-8  w-full max-w-2xl">
-          <h1 className="text-3xl font-bold mb-4">The Looker Cooking Kit</h1>
+          <h1 className="text-3xl font-bold mb-4 text-green-600">The Looker Cooking Kit</h1>
           <p className="text-lg mb-2">Year 3-14</p>
           <div className="flex items-center mb-4">
             <div className="flex items-center text-yellow-500 mr-2">
