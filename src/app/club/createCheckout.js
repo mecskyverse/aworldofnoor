@@ -1,6 +1,6 @@
 import storefrontClient from '@/lib/shopify';
 
-const createCheckout = async (variantId=0, quantity=1) => {
+const createCheckout = async (variantId='41197088997447', quantity=1) => {
   const { data, errors } = await storefrontClient.request({
     query: `
       mutation createCheckout($input: CheckoutCreateInput!) {

@@ -1,7 +1,7 @@
-import menu7Image from '@/../public/assets/cbackground.jpg'
-import menu8Image from '@/../public/assets/homeslide2.png'
-import menu9Image from '@/../public/assets/homeslide3.png'
-import menu10Image from '@/../public/assets/homeslide4.png'
+import menu7Image from '@/../public/assets/recipes/chilli-corn-carne.webp'
+import menu8Image from '@/../public/assets/recipes/penne-salmon.webp'
+import menu9Image from '@/../public/assets/recipes/matar-kheema.webp'
+import menu10Image from '@/../public/assets/recipes/wiener-schnitzel.webp'
 import menu11Image from '@/../public/assets/homeslide5.png'
 import menu12Image from '@/../public/assets/Homeslide6.png'
 

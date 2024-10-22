@@ -57,7 +57,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Image alt='logo' priority={false} src={logo} className='absolute md:w-auto w-12 border-4 box-content md:left-20 left-10 md:top-4 top-4 border-white bg-white rounded-full md:flex hidden' />
+            <Image 
+              alt='logo' 
+              priority={false} 
+              src={logo} 
+              className='absolute md:w-auto w-12 border-4 box-content md:left-20 left-10 md:top-4 border-white bg-white rounded-full md:flex' 
+            />
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">

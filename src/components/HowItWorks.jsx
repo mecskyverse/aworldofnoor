@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import recipeBook from '@/../public/assets/RecipeBook.png'
@@ -6,7 +7,6 @@ import leaf1 from '@/../public/assets/leaf1.svg'
 import leaf from '@/../public/assets/leaf.svg'
 import howItWorks from '@/../public/assets/howItWorks.png'
 import bgDots from '@/../public/assets/bgDots.svg'
-
 import { Jost } from 'next/font/google'
 
 const jost = Jost({
@@ -14,7 +14,36 @@ const jost = Jost({
     subsets: ['latin'],
     display: 'swap',
 })
+
 const HowItWorks = () => {
+    const handleDownloadPDF = async () => {
+        try {
+            const pdfUrl = '/assets/pdf/recipe-book.pdf';
+
+            const response = await fetch(pdfUrl);
+            const blob = await response.blob();
+            
+            // Create a blob URL for the PDF
+            const blobUrl = window.URL.createObjectURL(blob);
+            
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = 'World-of-Noor-Recipe-Book-1.pdf'; // Set the download filename
+            
+            // Append to document, click, and cleanup
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Cleanup the blob URL
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error('Error downloading PDF:', error);
+            alert('Failed to download PDF. Please try again later.');
+        }
+    };
+
     return (
         <div className='w-full'>
             <div className='w-full bg-[#0E609D] h-[340px] items-center flex relative'>
@@ -23,7 +52,12 @@ const HowItWorks = () => {
                     <p className='text-white lg:text-5xl md:text-4xl sm:text-4xl text-3xl text-center  leading-normal md:self-end drop-shadow-[0_4px_35px_rgba(0,0,0,0.30)]'>
                         Download World of Noor Recipe Book 1 Now!
                     </p>
-                    <button className='md:self-start flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'>Download PDF<Image src={arrowRight} className='md:w-auto w-6' /></button>
+                    <button 
+                        onClick={handleDownloadPDF}
+                        className='md:self-center flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'
+                    >
+                        Download PDF<Image src={arrowRight} className='md:w-auto w-6' alt="arrow right" />
+                    </button>
                 </div>
                 <Image src={recipeBook} alt='recipe book' className='absolute -top-16 hidden md:block right-[20%]' />
             </div>

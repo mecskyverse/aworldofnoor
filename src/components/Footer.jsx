@@ -32,7 +32,7 @@ const Footer = () => {
         </section>
         <section className='md:w-[30%] md:flex hidden w-full h-full md:flex-col flex-row  justify-center items-center gap-4 md:border-r border-black'>
           <span className='text-[#252525] md:text-4xl text-3xl'>Join Us</span>
-          <button className='flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'>Let's Start Cooking<Image src={arrowRight} className='md:w-auto w-6' /></button>
+          <Link href='/menu' className='flex items-center z-10 gap-1 text-white px-5 font-medium text-base md:text-2xl md:py-1 py-2 bg-[#E6038A] rounded-full'>Let's Start Cooking<Image src={arrowRight} className='md:w-auto w-6' /></Link>
         </section>
         <section className='md:w-1/2 w-full h-full flex flex-col justify-center md:pl-20 gap-4'>
           <span className='text-[#252525] md:text-4xl text-3xl  w-full md:text-start text-center'>Stay Up-to-date</span>
