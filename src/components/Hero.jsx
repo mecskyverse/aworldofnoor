@@ -138,8 +138,8 @@ const Hero = () => {
 
     return (
         <>
-            <div className='md:h-[85vh] h-[60vh] flex flex-col'>
-                <div className='bg-[#1692CD] md:h-fit h-full w-full justify-center flex relative md:pt-0'>
+            <div className='md:h-[85vh] h-[60vh] flex flex-col w-fit'>
+                <div className='bg-[#1692CD] md:h-fit h-full justify-center flex relative md:pt-0'>
                     <motion.div 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
