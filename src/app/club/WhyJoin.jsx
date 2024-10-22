@@ -5,11 +5,12 @@ const WhyJoin = () => {
   return (
     <Card className="bg-[#37a3d3] text-white p-8 rounded-3xl md:max-w-[70%] mx-auto my-10">
       <CardContent className="text-center space-y-4">
-        <h2 className="text-4xl font-bold mb-4">
-          Buy the Subscription box to join Noor's Club and receive your Cooking Starter kit.
+        <h2 className="text-4xl font-bold mb-4 ">
+            Join our club!
         </h2>
-        <p className="text-lg">
-          The Subscription Box is perfect for younger kids new to cooking. This pack will provide you premium access to our club, Recipes, Tips, Cards and a personally curated cooking kit.
+        <p className="text-xl text-neutral-100">
+        Each box is perfect for young children to support them in their culinary journey! <br/>
+        Every 3 months, we will send you a new box carefully curated with new tools, recipes, and games!
         </p>
       </CardContent>
     </Card>

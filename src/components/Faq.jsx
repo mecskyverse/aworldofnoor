@@ -6,21 +6,16 @@ const Faq = () => {
     const FaqData = [
         {
             question: "What is A World of Noor?",
-            answer: "This is where I (Chef Noor) share my cooking escapades with the world! My Daddy has a saying: 'Learning in public' which he says will help me to learn how to cook better but also help others to join me and learn to cook as well. We talked about it and I liked the idea! So here we are! We started when I was only 18 months old and I love all the different ingredients and 'tricks' and 'mixes. I watch some of my old videos and I can't believe how much I have learned already! Join me with your mommy or daddy (or your grandparents) too!"
+            answer: "A World of Noor is a lifestyle, entertainment, and learning experience for children, from pre-toddler to their teens. It is a place to discover the world, its cultures, and its histories, to partake in with parents, grandparents, guardians, or other loved ones. We hope it will help you create amazing intergenerational and cross cultural memories!"
         },
         {
             question: "How did A World of Noor Start?",
-            answer: "When the Covid pandemic started, Daddy was at a loss of what to do with his little 18 month old daughter. They had originally planned a family vacation to Europe, but had to cancel it and were now confined to their small condo during the lockdowns. So Daddy took to cooking with Noor to let her travel to the world through food. To keep in touch with Family far away, they started to broadcast on Instagram Live, and to share short recipe videos, and before you knew it, they had travelled to 50 culinary experiences around the world! Parents from here in California, as well as our beloved Canada from the UK, Kenya, Singapore, China and more, started to reach out to ask for the tailored father-daughter recipes and to learn new tips and tricks. It was the start of a global community that has opened our world up even more."
+            answer: "When COVID-19 started and we were all locked in our homes, I (Noor) was barely 18 months old and Dada was at a loss for things to do. In order to give me the joy of learning about new cultures and places, he came up with the idea to travel virtually by cooking food from around the world. We started an initial instagram Live show to celebrate Navroz, the Persian New Year on March 21st, 2020, and A World of Noor was born!"
         },
         {
             question: "What can I do on the site?",
-            answer: "This site is part of our 'hobby' and is constantly growing. Right now you can see videos, read and download recipes, and if you sign up, you can share photos of your cooking adventures!"
-        },
-        {
-            question: "Where can I get a Subscription box?",
-            answer: "We have started a subscription box too! It will come out quarterly and it is still being developed but if you purchase now, you get a huge discount! Also - I would love for suggestions and collaborations. Take a look at it here for more details"
-        },
-      
+            answer: "Little did we know that cooking would resonate with so many! Dada did not expect the number of requests for the father and daughter tailored recipes and so we have decided to share them here for others. On this site you can discover new recipes and purchase tailored boxes full of tools and tips. We are constantly expanding and soon you will be able to share your pictures and accounts, and we will be expanding into music, art, and science too!"
+        },  
     ]
     const handleFaqClick = (index) => {
         if (faqAnswerToShow === index) {

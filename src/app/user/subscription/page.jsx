@@ -147,12 +147,13 @@ function page() {
             <p className="mb-4">
               This all-in-one package includes high-quality cooking essentials, a stylish chef's cap, and beautifully designed recipe cards to inspire your culinary adventures.
             </p>
-            <h3 className="text-xl font-bold mb-2">Key Features</h3>
+            <h3 className="text-xl font-bold mb-2">What you'll get?</h3>
             <ul className="list-disc pl-6">
-              <li>Premium Quality Essentials</li>
-              <li>Inspiring Recipe Cards</li>
-              <li>Thoughtfully Curated</li>
-              <li>Perfect for All Skill Levels</li>
+              <li>Two Wooden Spoons</li>
+              <li>One Red Whisk & One Blue Whisk</li>
+              <li>3 Mini Recipe Cards</li>
+              <li>3 Full Page Recipe Cards To Write Notes</li>
+              <li>Stickers & Coloring Pages</li>
             </ul>
           </div>
         </div>
