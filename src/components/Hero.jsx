@@ -138,13 +138,13 @@ const Hero = () => {
 
     return (
         <>
-            <div className='md:h-[85vh] h-[60vh] flex flex-col w-fit'>
-                <div className='bg-[#1692CD] md:h-fit h-full justify-center flex relative md:pt-0'>
+            <div className='md:h-[75vh] h-[60vh] flex flex-col w-full'>
+                <div className='bg-[#1692CD] w-full md:h-fit h-full justify-center flex relative md:pt-0'>
                     <motion.div 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
-                        className='md:w-1/2 md:bg-transparent pt-20 w-full flex md:flex-col md:self-auto self-start md:z-10 z-[5] px-10 justify-center items-center relative md:bg-none'
+                        className='md:w-3/5 md:bg-transparent pt-20 w-full flex md:flex-col md:self-auto self-start md:z-10 z-[5] px-10 justify-center items-center relative md:bg-none'
                     >
                         <motion.div 
                             initial={{ y: 20, opacity: 0 }}
@@ -157,7 +157,9 @@ const Hero = () => {
                                 variants={fadeIn}
 
                             >
-                                Let's travel virtually by cooking food from around the world.
+                                <span>Welcome to A World Of Noor!</span><br/>
+                                <span className='md:text-4xl lg:text-5xl sm:text-3xl'>Let’s travel the world through food!</span>
+
                             </motion.p>
                             <motion.button 
                                 whileHover={{ scale: 1.05 }}
@@ -179,14 +181,14 @@ const Hero = () => {
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8 }}
-                        className='md:w-1/2 md:relative justify-start z-0 md:flex absolute bottom-0 w-full'
+                        className='md:w-2/5 md:relative justify-start z-0 md:flex absolute bottom-0 w-full'
                     >
                         <motion.div
                             animate={{ y: [-10, 10, -10] }}
                             transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
                             className="relative"
                         >
-                            <Image alt='cartoon_Image' className='md:relative absolute bottom-0' src={cartoon} />
+                            <Image alt='cartoon_Image' className='md:relative absolute bottom-0' width={500} src={cartoon} />
                         </motion.div>
                         <motion.div
                             animate={{ rotate: 360 }}

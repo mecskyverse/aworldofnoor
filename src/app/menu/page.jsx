@@ -37,7 +37,8 @@ function Menu() {
           RECIPES
         </h1>
         <p className="text-[#262522] mb-5 md:w-[50%] md:text-xl">
-          Cooking is an adventure in learning about the world! Although it can sometimes be overwhelming to decide what to cook because there are so many options! Look through my recipes alphabetically or by country
+          Cooking is an adventure in learning about the world!<br/>
+          Our recipes are tailored for parent and child – with tips on what to prep in advance and how to take safety precautions! Look through the recipes alphabetically or by country to start discovering spices and flavors and foods from countries near and far!
         </p>
         <div className="flex space-x-4 pt-4">
           <Button
