@@ -73,7 +73,7 @@ function SubscriptionBox() {
             alt={`subscription Item`}
             width='420'
             height='420'
-            className='object-cover w-full md:w-auto h-auto'
+            className='object-cover'
             priority
           />
         </div>
